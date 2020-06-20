@@ -1,1 +1,36 @@
-<iframe src="https://onedrive.live.com/embed?cid=1B2A6953334C0E08&resid=1B2A6953334C0E08%21136&authkey=AAyJ-m49toZ3OzI&em=2" width="1000" height="1000" frameborder="0" scrolling="yes"></iframe>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="http://wowexec.github.io/" />
+<title>1000秒倒计时 (wowexec toolbox)</title>
+<script type="text/javascript">
+function selectValue(){
+  window.open("sub.html","","status:no;resizable:yes;")
+}
+</script>
+</head>
+<body>
+
+创建时间：2020年6月20日
+<p class="jump"><a id="href" href="http://wowexec.github.io/">返回主页    </a>倒计时：<b id="wait">1000</b>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            var wait = document.getElementById('wait'),
+                href = document.getElementById('href').href;
+            var interval = setInterval(function(){
+                var time = --wait.innerHTML;
+                if(time <= 0) {
+                    location.href = href;
+                    clearInterval(interval);
+                };
+            }, 1000);
+        })();
+    </script>
+
+</body>
+</html>
