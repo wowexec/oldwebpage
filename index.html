@@ -1,9 +1,9 @@
 <html>
-  
+
 <head>
  <meta charset="utf-8">
  <meta name="author" content="http://wowexec.github.io/" />
- <title>1000秒倒计时 (wowexec toolbox)</title>
+ <title>1000秒倒计时</title>
  <script type="text/javascript">
  function selectValue(){
    window.open("sub.html","","status:no;resizable:yes;")
@@ -12,13 +12,87 @@
 </head>
 
 <body>
+<p>
+<font color="#E54D42" size="30" face="Times New Roman">
+WOWEXEC Toolbox
+</font>
+</p>
 
+
+
+<!-- 统计代码 Start -->
+<script language=JavaScript>
+<!--
+var caution = false
+function setCookie(name, value, expires, path, domain, secure) {
+var curCookie = name + "=" + escape(value) +
+((expires) ? "; expires=" + expires.toGMTString() : "") +
+((path) ? "; path=" + path : "") +
+((domain) ? "; domain=" + domain : "") +
+((secure) ? "; secure" : "")
+if (!caution || (name + "=" + escape(value)).length <= 4000)
+document.cookie = curCookie
+else
+if (confirm("Cookie exceeds 4KB and will be cut!"))
+document.cookie = curCookie
+}
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+function deleteCookie(name, path, domain) {
+if (getCookie(name)) {
+document.cookie = name + "=" +
+((path) ? "; path=" + path : "") +
+((domain) ? "; domain=" + domain : "") +
+"; expires=Thu, 01-Jan-70 00:00:01 GMT"
+}
+}
+function fixDate(date) {
+var base = new Date(0)
+var skew = base.getTime()
+if (skew > 0)
+date.setTime(date.getTime() - skew)
+}
+var now = new Date()
+fixDate(now)
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+var visits = getCookie("counter")
+if (!visits)
+visits = 1
+else
+visits = parseInt(visits) + 1
+setCookie("counter", visits, now)
+document.write("提示：您是第" + visits + "位访问本工具箱的。")
+// -->
+</script>
+<!-- 统计代码 End -->
+
+<p>
+<font color="#0000FF" size="3" face="微软雅黑">
 创建时间：2020年6月20日
+</font>
+</p>
+
+<p>
+<font color="#0000FF" size="3" face="微软雅黑">
 修改时间：2020年6月21日
+</font>
+</p>
 
 <p class="jump"><a id="href" href="http://wowexec.github.io/">返回主页</a>
-倒计时：<b id="wait">1000</b>
-                </p>
+</p>
+<p>
+<font color="#C03045" size="100" face="微软雅黑">倒计时：
+<b id="wait">1000</b>
+</font>
+</p>
 
             </div>
         </div>
