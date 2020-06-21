@@ -19,8 +19,6 @@ WOWEXEC Toolbox
 </p>
 
 
-
-<!-- 统计代码 Start -->
 <!-- Author: https://blog.csdn.net/u014571132/article/details/50936564 -->
 
 <script language=JavaScript>
@@ -32,10 +30,10 @@ var curCookie = name + "=" + escape(value) +
 ((path) ? "; path=" + path : "") +
 ((domain) ? "; domain=" + domain : "") +
 ((secure) ? "; secure" : "")
-if (!caution || (name + "=" + escape(value)).length <= 4000)
+if (!caution || (name + "=" + escape(value)).length <= 8192)
 document.cookie = curCookie
 else
-if (confirm("Cookie exceeds 4KB and will be cut!"))
+if (confirm("Cookie exceeds 8 KB will be cut!"))
 document.cookie = curCookie
 }
 function getCookie(name) {
@@ -71,10 +69,10 @@ visits = 1
 else
 visits = parseInt(visits) + 1
 setCookie("counter", visits, now)
-document.write("提示：这是第" + visits + "次访问本工具箱。")
+document.write("提示：这是您的第" + visits + "次访问本工具箱。")
 // -->
 </script>
-<!-- 统计代码 End -->
+
 
 <p>
 <font color="#0000FF" size="3" face="微软雅黑">
